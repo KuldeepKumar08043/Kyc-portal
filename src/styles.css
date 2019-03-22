@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-danger, .active {
+    background: #f42831;
+    color: #fff;
+}
+.pd-b-10{
+    padding: 10px;
+}
+.pd-t-10{
+    padding-top:10px;
+}
+table {
+    width: 100%;
+  }
+  .mat-danger-color{
+    background: #eeeeee;
+}
+.mat-width{
+    width:100px;
+}
+.mat-form-width{
+    width:330px;
+}
