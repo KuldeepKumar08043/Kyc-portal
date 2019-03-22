@@ -1,0 +1,9 @@
+<!-- <div class="">Home</div> -->
+<mat-nav-list>
+  <mat-list-item *ngFor="let item of salesList" (click)="gotoProductDetails('/dashboard',item.id)" [ngClass]="{'active': selectedItem == item.id}">
+     <a matLine class="color-name">{{ item.name }}</a>
+     <!-- <button mat-icon-button (click)="showInfo(link)">
+        <mat-icon>info</mat-icon>
+     </button> -->
+  </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,58 @@
+<div class="header-part">
+  <app-header></app-header>
+</div>
+
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-4">
+    <app-sidenav-bar [result]=value (clicked)="onClicked($event)"></app-sidenav-bar>
+  </div>
+  
+  <div class="col-sm-8 shadow-sm p-3 mb-5 bg-white rounded">        
+    <div class="">
+      <div class="dashboard">  
+        <p class="mat-danger pd-b-10 rounded-top">Dashboard</p>         
+      <div class="row pd-t-10">        
+          <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>      
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-hover">
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef class="align-middle font-weight-bold"> No. </th>
+                <td mat-cell *matCellDef="let element" class="align-middle"> {{element.id}} </td>
+              </ng-container>
+            
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef class="align-middle font-weight-bold"> Name </th>
+                <td mat-cell *matCellDef="let element" class="align-middle"> {{element.name}} </td>
+              </ng-container>
+            
+              <!-- Weight Column -->
+              <ng-container matColumnDef="weight">
+                <th mat-header-cell *matHeaderCellDef class="align-middle font-weight-bold"> Weight </th>
+                <td mat-cell *matCellDef="let element" class="align-middle"> {{element.weight}} </td>
+              </ng-container>
+            
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="symbol">
+                <th mat-header-cell *matHeaderCellDef class="align-middle font-weight-bold"> Symbol </th>
+                <td mat-cell *matCellDef="let element" class="align-middle"> {{element.symbol}} </td>
+              </ng-container>
+            
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+    </div>
+    <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+  </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+

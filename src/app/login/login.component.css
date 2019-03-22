@@ -1,0 +1,16 @@
+.login-card{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mat-card-header,.mg-l-0,.mat-card-actions{
+    margin-left: 0;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+.login-btn{
+    padding: 5px 0;
+}

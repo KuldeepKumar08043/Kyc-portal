@@ -1,0 +1,10 @@
+.list-item-pd-0{
+    padding-left: 0px;
+}
+.list-item-pd-0 li{
+    list-style: none;   
+    float: left;
+}
+.pd-t-10{
+    padding: 0 15px;
+}

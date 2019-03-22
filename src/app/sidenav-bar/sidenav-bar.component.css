@@ -1,0 +1,10 @@
+.mat-nav-list .mat-list-item{
+    border: 1px solid #eeeeee;
+}
+.active .color-name{
+    color: #ffffff;
+}
+.mat-nav-list .mat-list-item:hover{
+    background: #f42831;
+    color: #ffffff;
+}
